@@ -1,0 +1,510 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    top: 10;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+header {
+    background: black;
+    color: #fff;
+    padding: 5px 0;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.logo {
+    float: left;
+    font-size: 24px;
+    color: orange
+}
+
+.text-image-container {
+    display: flex;
+    align-items: center; /* Vertically centers the image and text */
+    gap: 60px; /* Space between the image and the text */
+}
+
+.text-image-container img {
+    max-width: 200px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50px;
+}
+
+.text-image-container p {
+    flex: 1; /* This ensures the paragraph takes up the remaining space */
+    margin: 0; /* Remove default margin */
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+nav {
+    float: right;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: fixed;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+#hero {
+    background: black;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 36px;
+}
+
+#about, #skills, #portfolio, #contact {
+    padding: 20px 0;
+}
+
+#about p, #contact p {
+    font-size: 18px;
+}
+
+#portfolio .grid {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+#portfolio .grid-item {
+    flex: 1;
+    place-items: center;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio .grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+#portfolio .grid-item h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: white;
+}
+
+.download-btn:active {
+    background-color: black;
+}
+
+.button2 {
+    display: inline-block;
+    background-color: orange;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.typing-effect {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    border-right: 4px solid white;  /* Cursor effect */
+    padding-right: 5px;  /* Space after the text */
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30) 1s infinite, blink 0.75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Blinking cursor effect */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.wrapper{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.wrapper h2{
+    text-align: left;
+    color: black;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.line{
+    height: 35px;
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+    line-height: 35px;
+    font-size: 15px;
+    color: #fff;
+    padding: 0 0 0 10px;
+    position: relative;
+    background: #262626;
+    border-radius: 50px;
+    z-index: -2;
+    font-weight: 900;
+    box-shadow: 0 2px 20px rgba(0,0,0,0,5);
+}
+.line::after{
+    content:'';
+    background: linear-gradient(45deg, #ee0979, #ff6a00);
+    height: 35px;
+    transition: 7s;
+    display: block;
+    width: 100%;
+    animation: animate 1 4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 50px;
+}
+.line1::after{
+    max-width: 90%;
+}
+.line2::after{
+    max-width: 85%;
+}
+.line3::after{
+    max-width: 80%;
+}
+.line4::after{
+    max-width: 70%;
+}
+.line5::after{
+    max-width: 88%;
+}
+
+@keyframes animate{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100;
+    }
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px; /* Space between icons */
+}
+
+.skill-icon {
+    background-color: #cfcfcf; /* Light gray background for icons */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.skill-icon img {
+    max-width: 50px; /* Adjust this value based on the size of your icons */
+    max-height: 50px;
+}
+
+.skill-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1c1c1c;
+    color: #f4f4f4;
+}
+
+.dark-mode .slider {
+    background-color: #555;
+}
+
+.dark-mode input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 24px;
+}
+
+.switch input {
+    display: inline-block;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.dark-mode .wrapper h2,
+.dark-mode .wrapper p {
+    color: #f4f4f4;
+}
+.dark-mode .logo-text {
+    color: white;
+}
+.dark-mode .description {
+    color: white;
+}
+
+.dark-mode .grid-item {
+    color: black;
+}
+.dark-mode .label p {
+    color: white;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 300px;
+    margin: auto;
+  }
+  
+.mySlides {
+    display: none;
+}
+  
+/* Fade animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+  
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+  
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+  
+  /* Dots/bullets */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Space between logo and description */
+}
+
+.soc-logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.logo-text {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.description {
+    font-size: 16px;
+    color: #000000;
+}
+
+a {
+    margin-left: 20px;
+    color: #007BFF;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+#feedback {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+#feedback .container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+.form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: black;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.submit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #feedback {
+      padding: 20px 15px;
+    }
+  }
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: right;
+    padding: 0px 0;
+    margin-top: 2px;
+}

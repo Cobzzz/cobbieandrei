@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     margin: 0;
     top: 10;
@@ -500,6 +500,12 @@ a:hover {
       padding: 20px 15px;
     }
   }
+
+  @media (max-width: 768px) {
+    .box {
+        font-size: 14px;
+    }
+}
 
 footer {
     background: #333;
